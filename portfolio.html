@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Essays by Smita</title>
+  <meta name="description" content="Selected essays, projects, research, and case studies — plus a dashboard of the work." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=Merriweather:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <section class="page-head">
+    <div class="container">
+      <p class="eyebrow">Portfolio</p>
+      <h1>The work, gathered.</h1>
+      <p class="muted">Essays, projects, research, case studies, and credentials — a single page for anyone who wants the full picture.</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <p class="eyebrow">By the numbers</p>
+      <div class="stat-grid" id="stats" style="margin-bottom:50px"></div>
+
+      <div class="section-head"><div><p class="eyebrow">Selected work</p><h2>Featured Essays</h2></div><a class="btn btn-ghost" href="essays.html">All essays</a></div>
+      <div class="grid grid-3" id="folioEssays"></div>
+
+      <div class="section-head" style="margin-top:50px"><div><p class="eyebrow">Analysis</p><h2>Case Studies</h2></div><a class="btn btn-ghost" href="case-studies.html">All cases</a></div>
+      <div class="grid grid-3" id="folioCases"></div>
+
+      <div class="section-head" style="margin-top:50px"><div><p class="eyebrow">Credentials</p><h2>Education &amp; Recognition</h2></div></div>
+      <div class="grid grid-2">
+        <div class="card"><h3>What goes here</h3><p class="excerpt">Add your degrees, certifications, competitions, and any recognition. This section makes the site read as a serious profile rather than a blog.</p></div>
+        <div class="card"><h3>Resume</h3><p class="excerpt">Link a downloadable PDF résumé here so reviewers and admissions committees can find it in one click.</p><div style="margin-top:14px"><a class="btn btn-gold" href="#">Download résumé (add your PDF)</a></div></div>
+      </div>
+    </div>
+  </section>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    buildHeader(); buildFooter();
+    var totalViews = ESSAYS.reduce(function(a,e){return a+e.views;},0);
+    var totalMins = ESSAYS.reduce(function(a,e){return a+e.readMins;},0);
+    document.getElementById("stats").innerHTML =
+      stat(ESSAYS.length, "Essays published") +
+      stat(totalViews.toLocaleString(), "Total reads") +
+      stat("1,240", "Subscribers") +
+      stat(totalMins + " min", "Words to read");
+    function stat(n,l){ return '<div class="stat"><div class="num">'+n+'</div><div class="lbl">'+l+'</div></div>'; }
+    document.getElementById("folioEssays").innerHTML = ESSAYS.slice(0,3).map(function(e){return essayCard(e);}).join("");
+    document.getElementById("folioCases").innerHTML = (window.CASES||[]).map(function(c){return '<article class="card"><div class="tag-row"><span class="pill">'+c.category+'</span></div><h3>'+c.title+'</h3><p class="excerpt">'+c.excerpt+'</p></article>';}).join("");
+    initForms();
+  </script>
+</body>
+</html>

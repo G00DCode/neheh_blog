@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Add a <url> block for each new essay you publish. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://neheh.in/index.html</loc><priority>1.0</priority></url>
+  <url><loc>https://neheh.in/essays.html</loc><priority>0.9</priority></url>
+  <url><loc>https://neheh.in/essays/the-discipline-of-attention.html</loc><priority>0.8</priority></url>
+  <url><loc>https://neheh.in/garden.html</loc><priority>0.6</priority></url>
+  <url><loc>https://neheh.in/journal.html</loc><priority>0.6</priority></url>
+  <url><loc>https://neheh.in/book-notes.html</loc><priority>0.6</priority></url>
+  <url><loc>https://neheh.in/case-studies.html</loc><priority>0.6</priority></url>
+  <url><loc>https://neheh.in/quotes.html</loc><priority>0.5</priority></url>
+  <url><loc>https://neheh.in/portfolio.html</loc><priority>0.7</priority></url>
+  <url><loc>https://neheh.in/about.html</loc><priority>0.7</priority></url>
+  <url><loc>https://neheh.in/contact.html</loc><priority>0.4</priority></url>
+  <url><loc>https://neheh.in/newsletter.html</loc><priority>0.5</priority></url>
+</urlset>

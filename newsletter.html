@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Newsletter — Essays by Smita</title>
+  <meta name="description" content="Subscribe for a weekly essay, monthly insights, and reading recommendations." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=Merriweather:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <section class="page-head">
+    <div class="container">
+      <p class="eyebrow">Newsletter</p>
+      <h1>Think alongside me.</h1>
+      <p class="muted">One thoughtful essay, a few worthwhile links, and the occasional reading recommendation.</p>
+    </div>
+  </section>
+  <section class="section-tight">
+    <div class="container">
+      <div class="newsletter">
+        <h2>Subscribe</h2>
+        <p>You'll get: a weekly essay, monthly insights, and reading recommendations. No spam, ever.</p>
+        <form class="subscribe-form">
+          <input type="email" required placeholder="you@example.com" />
+          <button class="btn btn-gold" type="submit">Join the list</button>
+        </form>
+        <p class="form-note">Free. Unsubscribe anytime. To go live, connect a provider like Substack, Buttondown, or ConvertKit (see README).</p>
+      </div>
+      <div class="grid grid-3" style="margin-top:40px">
+        <div class="card"><h3>Weekly essay</h3><p class="excerpt">The newest piece, delivered the day it's published.</p></div>
+        <div class="card"><h3>Monthly insights</h3><p class="excerpt">A short roundup of what I learned and changed my mind about.</p></div>
+        <div class="card"><h3>Reading list</h3><p class="excerpt">Books, articles, and ideas worth your attention.</p></div>
+      </div>
+    </div>
+  </section>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>buildHeader(); buildFooter(); initForms();</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Essay Library — Essays by Smita</title>
+  <meta name="description" content="Browse every essay by topic, tag, and popularity. Philosophy, psychology, business, and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=Merriweather:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <section class="page-head">
+    <div class="container">
+      <p class="eyebrow">The Library</p>
+      <h1>Every essay, in one place.</h1>
+      <p class="muted">Filter by topic, search by idea, and sort by what matters to you. <span id="libCount"></span></p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <div class="toolbar">
+        <div class="search-wrap">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg>
+          <input class="search-input" id="libSearch" placeholder="Search essays…" />
+        </div>
+        <select class="select" id="libSort">
+          <option value="newest">Newest</option>
+          <option value="views">Most viewed</option>
+          <option value="likes">Most liked</option>
+          <option value="longest">Longest read</option>
+        </select>
+        <div class="view-toggle" id="viewToggle">
+          <button data-view="grid" class="active">Grid</button>
+          <button data-view="list">List</button>
+        </div>
+      </div>
+      <div class="chips" id="catChips" style="margin-bottom:26px"></div>
+      <div class="grid grid-3" id="libGrid"></div>
+    </div>
+  </section>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    buildHeader(); buildFooter();
+    var p = new URLSearchParams(location.search);
+    if (p.get("sort")) { libState.sort = p.get("sort"); }
+    initLibrary();
+    if (p.get("sort")) document.getElementById("libSort").value = p.get("sort");
+    initForms();
+  </script>
+</body>
+</html>
