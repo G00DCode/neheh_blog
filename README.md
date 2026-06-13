@@ -1,9 +1,5 @@
-# Essays by Smita — your personal publishing platform
-
-A fast, SEO-friendly static website for essays, with a digital garden, journal, book notes,
-case studies, quotes, portfolio, and newsletter. Built with plain HTML, CSS, and JavaScript —
-**no build step, no framework, no Node required.** You launch it by uploading the folder.
-
+# Essays by Smita 
+<!--
 ---
 
 ## What's inside
@@ -120,3 +116,4 @@ To collect real subscribers/messages, point them at a provider:
 ## A note on SEO
 Each essay is a real, separate HTML page with its own `<title>` and description, so search engines
 can index them well. For best results, add an essay's URL to `sitemap.xml` when you publish it.
+-->
