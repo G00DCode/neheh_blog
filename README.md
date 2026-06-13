@@ -1,4 +1,4 @@
-# Essays by Priyam — your personal publishing platform
+# Essays by Smita — your personal publishing platform
 
 A fast, SEO-friendly static website for essays, with a digital garden, journal, book notes,
 case studies, quotes, portfolio, and newsletter. Built with plain HTML, CSS, and JavaScript —
