@@ -7,7 +7,7 @@ window.SITE = {
   author: "Smita",
   tagline: "Essays on thinking, business, and the examined life.",
   intro: "I write long-form essays at the intersection of philosophy, psychology, and business — and keep a public notebook of the ideas I'm still working out.",
-  email: "priyam.bhimani777@gmail.com",
+  email: "goodychauhan@gmail.com",
 };
 
 /* Topics / categories with colors */
